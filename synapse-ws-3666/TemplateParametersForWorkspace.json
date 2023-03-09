@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "synapse-ws-3666"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"synapse-ws-3666-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:synapse-ws-3666.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv"
+		},
+		"synapse-ws-3666-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://mydatalakstorage343.dfs.core.windows.net"
+		}
+	}
+}
